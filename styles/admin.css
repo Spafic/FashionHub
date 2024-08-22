@@ -1,0 +1,429 @@
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif !important;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff !important;
+    letter-spacing: normal;
+}
+
+/* Modal Form Elements */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="file"],
+.modal-content select,
+.modal-content textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="number"]:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+
+/* Message Container */
+.message-container {
+    display: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+}
+
+.message-container.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message-container.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message-container.show {
+    display: block;
+    opacity: 1;
+}
+
+.message-container.hide {
+    opacity: 0;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the box */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    color: #28a745;
+    /* Green for price */
+    font-weight: bold;
+}
+
+.product-card .rating {
+    color: #f39c12;
+    /* Gold for rating */
+}
+
+.product-card {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.description {
+    color: rgb(9, 219, 184);
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+
+
+/* Add New Item Button */
+#add-new-item {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff; /* Assuming a blue background color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* White glow */
+}
+
+
+#add-new-item:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8) !important; /* White glow */
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Modal Save Changes Button */
+.button-save {
+    background-color: #007bff !important;
+    /* Blue for edit */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-save:hover {
+    background-color: #0056b3 !important;
+    transform: scale(1.05);
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.8);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(6%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+#animated-header {
+    font-family: Arial, sans-serif;
+    font-size: 2.5em;
+    /* Increased font size */
+    color: white;
+    /* Changed text color to white */
+    animation: slideIn 1.5s ease-out;
+    transition: color 0.5s ease-in-out;
+}
+
+
+/* Common button styles */
+.admin-button,
+.admin-button:hover {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Blue-Pink Gradient */
+.admin-button.blue-pink {
+    background: linear-gradient(45deg, #007bff, #ff007f);
+}
+
+.admin-button.blue-pink:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 0 0 20px rgba(255, 0, 127, 0.5);
+}
+
+/* Yellow Gradient */
+.admin-button.yellow {
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+}
+
+.admin-button.yellow:hover {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5), 0 0 20px rgba(255, 153, 0, 0.5);
+}
+
+/* Red Gradient */
+.admin-button.red {
+    background: linear-gradient(45deg, #ff4d4d, #cc0000);
+}
+
+.admin-button.red:hover {
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.5), 0 0 20px rgba(204, 0, 0, 0.5);
+}
+
+/* Specific button styles */
+#add-new-item {
+    background: linear-gradient(45deg, #007bff, #ff007f);
+}
+
+#add-new-item:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 0 0 20px rgba(255, 0, 127, 0.5);
+}
+
+.edit-product,
+#confirm-remove,
+#cancel-remove {
+    background: linear-gradient(45deg, #007bff, #ff007f);
+}
+
+.edit-product:hover,
+#confirm-remove:hover,
+#cancel-remove:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 0 0 20px rgba(255, 0, 127, 0.5);
+}
+
+.remove-product,
+#cancel-remove {
+    background: linear-gradient(45deg, #ff4d4d, #cc0000);
+}
+
+.remove-product:hover,
+#cancel-remove:hover {
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.5), 0 0 20px rgba(204, 0, 0, 0.5);
+}
+
+/* Common button styles inside modals */
+#add-item-modal .admin-button,
+#edit-product-modal .button-save {
+    background: linear-gradient(45deg, #007bff, #ff007f) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    position: relative !important;
+    overflow: hidden !important;
+    outline: none !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Add white lightning effect on hover */
+#add-item-modal .admin-button:hover,
+#edit-product-modal .button-save:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+        /* White glow */
+        0 0 20px rgba(0, 0, 255, 0.6),
+        /* Blue gradient glow */
+        0 0 30px rgba(255, 0, 127, 0.6);
+    /* Pink gradient glow */
+    transform: scale(1.05);
+    /* Slightly enlarge the button on hover */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transition for transform and box-shadow */
+}
+
+/* Add white lightning effect using pseudo-element */
+#add-item-modal .admin-button::before,
+#edit-product-modal .button-save::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 120% !important;
+    height: 120% !important;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 50%) !important;
+    border-radius: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: -1 !important;
+    opacity: 0.3 !important;
+    /* Adjust opacity as needed */
+    animation: lightning 1.5s infinite !important;
+    /* Lightning effect animation */
+}
+
+/* Animation for white lightning effect */
+@keyframes lightning {
+    0% {
+        transform: translate(-50%, -50%) scale(1) !important;
+        opacity: 0.3 !important;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1) !important;
+        opacity: 0.6 !important;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) !important;
+        opacity: 0.3 !important;
+    }
+}/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Maximum width */
+    box-sizing: border-box;
+    text-align: center; /* Center the text */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#confirm-remove {
+    background-color: #f44336; /* Red */
+    color: white;
+    width: 150px; /* Fixed width */
+}
+
+#confirm-remove:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+#cancel-remove {
+    background-color: #bbb; /* Gray */
+    color: white;
+    width: 150px; /* Fixed width */
+}
+
+#cancel-remove:hover {
+    background-color: #999; /* Darker gray */
+}

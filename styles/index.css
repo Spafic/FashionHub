@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
+
+/* Root Variables for Reuse */
+:root {
+    --primary-color: #102eff;
+    --accent-color: #ffd700; /* Gold */
+    --background-gradient: linear-gradient(45deg, #102eff, #d2379b);
+    --white-color: #fff;
+    --text-color: #f0f0f0;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --hover-transform: scale(1.03);
+    --hover-translateY: -3px;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-gradient);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat Alternates', sans-serif !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.3); /* Added a darker shade */
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--box-shadow);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hero section */
+.hero {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white-color);
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero .lead {
+    font-size: 24px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button.primary {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+}
+
+.cta-button:hover {
+    transform: var(--hover-transform);
+}
+
+/* Shapes */
+.shape {
+    position: absolute;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    animation: shape-1-animation 10s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+    animation: shape-2-animation 12s ease-in-out infinite;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--white-color);
+    transform: rotate(45deg);
+    top: 20%;
+    left: 30%;
+    animation: shape-3-animation 8s ease-in-out infinite;
+}
+
+.shape-4 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--white-color);
+    transform: rotate(30deg);
+    bottom: 10%;
+    right: 15%;
+    animation: shape-4-animation 14s ease-in-out infinite;
+}
+
+.shape-5 {
+    width: 80px;
+    height: 80px;
+    background-color: var(--white-color);
+    transform: rotate(60deg);
+    top: 40%;
+    right: 5%;
+    animation: shape-5-animation 11s ease-in-out infinite;
+}
+
+.shape-6 {
+    width: 120px;
+    height: 120px;
+    background-color: var(--white-color);
+    transform: rotate(-45deg);
+    bottom: 30%;
+    left: 10%;
+    animation: shape-6-animation 9s ease-in-out infinite;
+}
+
+.floating-shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-color);
+    opacity: 0.2;
+    animation: floating 8s ease-in-out infinite;
+}
+
+.shape-circle {
+    border-radius: 50%;
+}
+
+.shape-square {
+    transform: rotate(45deg);
+}
+
+.shape-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.shape-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.shape-star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.shape-cross {
+    clip-path: polygon(25% 0%, 75% 0%, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 75% 100%, 25% 100%, 25% 75%, 0% 75%, 0% 25%, 25% 25%);
+}
+
+.shape-wave {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 25% 100%, 25% 75%, 0% 75%);
+}
+
+.shape-curved {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.shape-polygon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.shape-overlapping-circles {
+    clip-path: circle(40% at 30% 30%), circle(40% at 70% 70%);
+}
+
+.shape-distorted {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    transform: rotate(10deg);
+}
+
+
+@keyframes shape-1-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes shape-2-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-20px, -20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes shape-3-animation {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+    100% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+}
+
+@keyframes shape-4-animation {
+    0% {
+        transform: rotate(30deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(30deg) translate(-10px, -10px);
+    }
+    100% {
+        transform: rotate(30deg) translate(0, 0);
+    }
+}
+
+@keyframes shape-5-animation {
+    0% {
+        transform: rotate(60deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(60deg) translate(15px, 15px);
+    }
+    100% {
+        transform: rotate(60deg) translate(0, 0);
+    }
+}
+
+@keyframes shape-6-animation {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(-45deg) translate(-12px, -12px);
+    }
+    100% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--white-color); /* Headers in sections are white */
+}
+
+/* Category Cards */
+.category-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.category-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Ensure cards have equal width */
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--accent-color); /* Card headers are gold */
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-slider {
+    overflow: hidden;
+}
+
+.testimonial-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial {
+    flex: 0 0 300px;
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.customer-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+/* Trending */
+.trending-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.trending-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Ensure items have equal width */
+}
+
+.trending-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* About */
+.about {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 80px 0;
+}
+
+.about h2 {
+    font-size: 42px;
+    color: var(--white-color); /* Section header is white */
+    margin-bottom: 30px;
+}
+
+.about .lead {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    flex: 1; /* Ensure items have equal width */
+}
+
+.about-item:hover {
+    transform: var(--hover-transform);
+}
+
+.about-item .icon {
+    font-size: 36px;
+    color: var(--accent-color); /* Icons are gold */
+    margin-bottom: 20px;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    color: var(--accent-color); /* Header in About section is gold */
+    margin-bottom: 15px;
+}
+
+.about-item p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional visual effects */
+.cloud-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cloudy.png') repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .category-cards, .trending-items, .about-content {
+        flex-direction: column;
+    }
+
+    .category-card, .trending-item, .about-item {
+        margin-bottom: 20px;
+    }
+
+    .testimonials {
+        padding: 40px 0;
+    }
+}
+/* Category Cards */
+.category-card {
+    overflow: hidden; /* Ensures image does not overflow */
+}
+
+.category-card img {
+    width: 100%;
+    height: auto; /* Ensures image scales correctly */
+    object-fit: cover; /* Ensures image covers container */
+}
+
+.trending-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.trending-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Ensure items have equal width */
+    position: relative; /* Ensure positioning is relative for child elements */
+}
+
+.trending-item img {
+    width: 100%;
+    height: auto; /* Allow height to adjust automatically based on width */
+    object-fit: cover; /* Ensure image covers the entire container without distortion */
+    display: block; /* Remove default spacing issues */
+}
+
+
+

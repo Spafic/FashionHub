@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "name": "Men's T-Shirt",
+        "category": "men",
+        "price": 29.99,
+        "rating": 4.666666666666668,
+        "image": "\/data\/imgs\/menProducts\/Men's T-Shirt.jpeg",
+        "description": "Comfortable cotton t-shirt",
+        "numRatings": 36
+    },
+    {
+        "id": 2,
+        "name": "Men's Jeans",
+        "category": "men",
+        "price": 49.99,
+        "rating": 4.454545454545454,
+        "image": "..\/data\/imgs\/menProducts\/Men's Jeans.jpg",
+        "description": "Stylish blue jeans",
+        "numRatings": 22
+    },
+    {
+        "id": 3,
+        "name": "Men's Jacket",
+        "category": "men",
+        "price": 99.99,
+        "rating": 4.76,
+        "image": "..\/data\/imgs\/menProducts\/Men's Jacket.jpeg",
+        "description": "Warm winter jacket",
+        "numRatings": 10
+    },
+    {
+        "id": 4,
+        "name": "Men's Sneakers",
+        "category": "men",
+        "price": 69.99,
+        "rating": 4.818181818181818,
+        "image": "..\/data\/imgs\/menProducts\/Men's Sneakers.jpeg",
+        "description": "Comfortable sneakers",
+        "numRatings": 22
+    },
+    {
+        "id": 5,
+        "name": "Men's Watch",
+        "category": "men",
+        "price": 199.99,
+        "rating": 4.696428571428571,
+        "image": "..\/data\/imgs\/menProducts\/Men's Watch.jpeg",
+        "description": "Elegant wristwatch",
+        "numRatings": 28
+    },
+    {
+        "id": 6,
+        "name": "Men's Sunglasses",
+        "category": "men",
+        "price": 79.99,
+        "rating": 4.399999999999999,
+        "image": "..\/data\/imgs\/menProducts\/Men's Sunglasses.jpeg",
+        "description": "Stylish sunglasses",
+        "numRatings": 21
+    },
+    {
+        "id": 7,
+        "name": "Men's Belt",
+        "category": "men",
+        "price": 39.99,
+        "rating": 4.6,
+        "image": "..\/data\/imgs\/menProducts\/Men's Belt.jpeg",
+        "description": "Leather belt",
+        "numRatings": 12
+    },
+    {
+        "id": 8,
+        "name": "Men's Cap",
+        "category": "men",
+        "price": 24.99,
+        "rating": 4.180000000000001,
+        "image": "..\/data\/imgs\/menProducts\/Men's Cap.jpeg",
+        "description": "Casual hat",
+        "numRatings": 10
+    },
+    {
+        "id": 9,
+        "name": "Women's Dress",
+        "category": "women",
+        "price": 49.99,
+        "rating": 4.8,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Dress.jpeg",
+        "description": "Elegant evening dress",
+        "numRatings": 8
+    },
+    {
+        "id": 10,
+        "name": "Women's Blouse",
+        "category": "women",
+        "price": 34.99,
+        "rating": 4.5,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Blouse.jpeg",
+        "description": "Stylish blouse",
+        "numRatings": 14
+    },
+    {
+        "id": 11,
+        "name": "Women's Skirt",
+        "category": "women",
+        "price": 39.99,
+        "rating": 4.6,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Skirt.jpeg",
+        "description": "Casual skirt",
+        "numRatings": 10
+    },
+    {
+        "id": 12,
+        "name": "Women's Heels",
+        "category": "women",
+        "price": 59.99,
+        "rating": 4.7,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Heels.jpeg",
+        "description": "High heels",
+        "numRatings": 20
+    },
+    {
+        "id": 13,
+        "name": "Women's Handbag",
+        "category": "women",
+        "price": 99.99,
+        "rating": 4.9,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Handbag.jpeg",
+        "description": "Elegant handbag",
+        "numRatings": 30
+    },
+    {
+        "id": 14,
+        "name": "Women's Sunglasses",
+        "category": "women",
+        "price": 79.99,
+        "rating": 4.4,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Sunglasses.jpeg",
+        "description": "Stylish sunglasses",
+        "numRatings": 18
+    },
+    {
+        "id": 15,
+        "name": "Women's Coat",
+        "category": "women",
+        "price": 24.99,
+        "rating": 4.3,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Coat.jpeg",
+        "description": "Silk scarf",
+        "numRatings": 5
+    },
+    {
+        "id": 16,
+        "name": "Women's Accessories",
+        "category": "women",
+        "price": 49.99,
+        "rating": 4.6,
+        "image": "..\/data\/imgs\/womenProducts\/Women's Accessories.jpeg",
+        "description": "Gold bracelet",
+        "numRatings": 10
+    },
+    {
+        "id": 18,
+        "name": "Kids' T-Shirt",
+        "category": "kids",
+        "price": 14.99,
+        "rating": 4.5,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' T-Shirt.jpeg",
+        "description": "Cotton t-shirt for kids",
+        "numRatings": 10
+    },
+    {
+        "id": 19,
+        "name": "Kids' Shorts",
+        "category": "kids",
+        "price": 19.99,
+        "rating": 4.4,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Shorts.jpeg",
+        "description": "Comfortable shorts",
+        "numRatings": 8
+    },
+    {
+        "id": 20,
+        "name": "Kids' Jacket",
+        "category": "kids",
+        "price": 34.99,
+        "rating": 4.6,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Jacket.jpeg",
+        "description": "Warm jacket for kids",
+        "numRatings": 12
+    },
+    {
+        "id": 21,
+        "name": "Kids' Hat",
+        "category": "kids",
+        "price": 12.99,
+        "rating": 4.2,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Hat.jpeg",
+        "description": "Cute hat for kids",
+        "numRatings": 6
+    },
+    {
+        "id": 17,
+        "name": "Kids' Shoes",
+        "category": "kids",
+        "price": 19.99,
+        "rating": 4.3,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Shoes.jpeg",
+        "description": "Comfortable shoes for kids",
+        "numRatings": 15
+    },
+    {
+        "id": 22,
+        "name": "Kids' Socks",
+        "category": "kids",
+        "price": 7.99,
+        "rating": 4.3,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Socks.jpeg",
+        "description": "Comfortable socks",
+        "numRatings": 4
+    },
+    {
+        "id": 23,
+        "name": "Kids' Backpack",
+        "category": "kids",
+        "price": 29.99,
+        "rating": 4.7,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Backpack.jpeg",
+        "description": "Stylish backpack for kids",
+        "numRatings": 9
+    },
+    {
+        "id": 24,
+        "name": "Kids' Pajamas",
+        "category": "kids",
+        "price": 19.99,
+        "rating": 4.5,
+        "image": "..\/data\/imgs\/kidsProducts\/Kids' Pajamas.jpeg",
+        "description": "Comfortable pajamas for kids",
+        "numRatings": 11
+    }
+]

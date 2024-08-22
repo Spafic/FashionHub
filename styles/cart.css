@@ -1,0 +1,282 @@
+/* General Styles */
+main {
+    margin-top: 50px;
+    padding: 0 20px; /* Add some padding for better spacing on smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+h1, h2 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #ffd700;
+}
+.cart-header{
+    align-items: center;
+    margin-top: 80px !important;
+    color: #ffd700 !important;
+}
+h2 {
+    color: #ffd700 !important; /* Maintain white color for contrast */
+    font-weight: bold; /* Keep bold for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Increase space below the heading */
+    font-size: 1.5rem; /* Adjust size for better readability */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Add a subtle underline */
+    padding-bottom: 10px; /* Space between text and underline */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.total-price:hover {
+    color: #1abc9c; /* Change color on hover */
+    border-bottom: 2px solid #1abc9c; /* Underline color changes on hover */
+}
+
+p {
+    color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+}
+
+/* Cart Items Container */
+.cart-items-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 20px;
+    gap: 20px; /* Space between cards in both rows and columns */
+}
+
+/* Cart Items */
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Fixed width for cards */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Align items inside the card */
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cart-item h2 {
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin-bottom: 5px;
+}
+
+.cart-item .quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cart-item .quantity-decrease, .cart-item .quantity-increase {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    font-size: 1.2em; /* Match font size with buttons */
+    line-height: 1; /* Ensure buttons align text properly */
+}
+
+.cart-item .quantity-decrease:hover, .cart-item .quantity-increase:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.cart-item{
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.item-quantity {
+    font-size: 1.4rem; /* Slightly larger font size */
+    font-weight: 600; /* Semi-bold for emphasis */
+    color: #fff; /* White color for contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
+    padding: 12px; /* Ample padding for a more spacious look */
+    border-radius: 8px; /* Larger border-radius for a smoother look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.item-quantity:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+
+/* Remove Item Button */
+.cart-item .remove-item {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.cart-item .remove-item:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Total Price Container */
+.total-price-container {
+    display: flex;
+    justify-content: center; /* Center the total price horizontally */
+    margin-top: 20px;
+}
+
+/* Total Price */
+#total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center; /* Center the total price text */
+}
+
+/* Confirm Order Section */
+#confirm-order-section {
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+}
+
+#confirm-order-section h2 {
+    margin-bottom: 20px;
+}
+
+#order-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#order-form label {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#order-form input, #order-form textarea {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+#order-form textarea {
+    height: 100px;
+    resize: none; /* Block resizing */
+}
+
+#order-form button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#order-form button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#order-message {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .cart-item {
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        width: calc(100% - 20px); /* One card per row on small screens */
+    }
+}
+
+
+
+
+#confirm-order-section {
+    text-align: center; /* Center-align content */
+}
+
+#order-message {
+    font-weight: bold;
+    color: white;
+    animation: shake 2s ease-in-out infinite; /* Add shake animation with infinite loop */
+    margin-top: 30px; /* Space above the message */
+    margin-bottom: 0; /* No space below the message */
+    padding: 0; /* No padding */
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 1.2em; /* Adjust font size if needed */
+}
+
+/* Keyframes for shaking animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    25% {
+        transform: translateX(-15px); /* Move left */
+    }
+    50% {
+        transform: translateX(15px); /* Move right */
+    }
+    75% {
+        transform: translateX(-15px); /* Move left */
+    }
+    100% {
+        transform: translateX(0); /* End position */
+    }
+}
+

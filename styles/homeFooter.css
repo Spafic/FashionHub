@@ -1,0 +1,127 @@
+footer {
+    background: rgba(0, 0, 0, 0.8); /* Glassy black background */
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    transform: translateX(5px);
+}
+
+.footer-section ul li a i {
+    margin-right: 10px; /* Add margin-right between icons and text */
+}
+
+.follow-us-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white; /* Initial color */
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-icons a:hover {
+    color: inherit;
+}
+
+.footer-icons .facebook:hover {
+    color: #3b5998;
+}
+
+.footer-icons .twitter:hover {
+    color: #1da1f2;
+}
+
+.footer-icons .instagram:hover {
+    color: #e4405f;
+}
+
+.footer-icons .linkedin:hover {
+    color: #0077b5;
+}
+
+.footer-icons .github:hover {
+    color: #85ff22; /* Contrasting color for GitHub icon */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom i {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
