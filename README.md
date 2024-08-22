@@ -104,7 +104,7 @@ FashionHub is licensed under the MIT License. See the [LICENSE](LICENSE) file fo
 
 ## 📬 **Contact**
 
-Questions or feedback? Click [here](mailto:omar.mamon203@gmial.com).
+Questions or feedback? Click [here](mailto:omar.mamon203@gmail.com).
 
 ---
 
