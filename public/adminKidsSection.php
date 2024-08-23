@@ -43,44 +43,44 @@ if (isset($_GET['search'])) {
     <link rel="stylesheet" href="../styles/home.css" type="text/css" />
     <link rel="stylesheet" href="../styles/fashion.css" type="text/css" />
     <link rel="stylesheet" href="../styles/homeFooter.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/nav.css" type="text/css" />
 </head>
 
 <body>
-    <?php require_once ('../common/adminNav.html'); ?>
+    <?php require_once('../common/adminNav.html'); ?>
 
     <main>
         <!-- Add this right after the <main> tag -->
         <div id="message-container" class="message-container"></div>
         <h1 id="animated-header">Admin - Kids Section Management</h1>
-
         <div class="search-sort-container">
-    <form action="" method="GET" class="search-form">
-        <div class="search-wrapper">
-            <input type="text" id="search" name="search" placeholder="Search products..."
-                value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </div>
-    </form>
+            <form action="" method="GET" class="search-form">
+                <div class="search-wrapper">
+                    <input type="text" id="search" name="search" placeholder="Search products..."
+                        value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
 
-    <div class="sort-options">
-        <a href="?sort=price&order=asc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
-            class="sort-option">
-            <i class="fas fa-sort-amount-down-alt"></i> Price: Low to High
-        </a>
-        <a href="?sort=price&order=desc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
-            class="sort-option">
-            <i class="fas fa-sort-amount-down"></i> Price: High to Low
-        </a>
-        <a href="?sort=rating&order=desc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
-            class="sort-option">
-            <i class="fas fa-star"></i> Rating: High to Low
-        </a>
-        <a href="?sort=rating&order=asc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
-            class="sort-option">
-            <i class="fas fa-star-half-alt"></i> Rating: Low to High
-        </a>
-    </div>
-</div>
+            <div class="sort-options">
+                <a href="?sort=price&order=asc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
+                    class="sort-option">
+                    <i class="fas fa-sort-amount-down-alt"></i> Price: Low to High
+                </a>
+                <a href="?sort=price&order=desc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
+                    class="sort-option">
+                    <i class="fas fa-sort-amount-down"></i> Price: High to Low
+                </a>
+                <a href="?sort=rating&order=desc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
+                    class="sort-option">
+                    <i class="fas fa-star"></i> Rating: High to Low
+                </a>
+                <a href="?sort=rating&order=asc<?php echo isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>"
+                    class="sort-option">
+                    <i class="fas fa-star-half-alt"></i> Rating: Low to High
+                </a>
+            </div>
+        </div>
 
         <button id="add-new-item" class="admin-button">Add New Item</button>
 
@@ -123,7 +123,7 @@ if (isset($_GET['search'])) {
                     <input type="number" id="add-price" name="price" placeholder="Price" step="0.01" required>
                     <input type="file" id="add-image" name="image" accept="image/*" required>
                     <textarea id="add-description" name="description" placeholder="Description" required></textarea>
-                    <button type="submit">Add Item</button>
+                    <button type="submit" class="admin-button">Add Item</button>
                 </form>
             </div>
         </div>
@@ -143,13 +143,13 @@ if (isset($_GET['search'])) {
                     </select>
                     <input type="number" id="edit-price" name="price" placeholder="Price" step="0.01" required>
                     <input type="file" id="edit-image" name="image" accept="image/*">
-                    <p>Current Image: <span id="current-image-name"></span></p>
+                    <p><strong style="font-style:italic">Current Image:</strong> <span id="current-image-name"></span>
+                    </p>
                     <textarea id="edit-description" name="description" placeholder="Description" required></textarea>
-                    <button type="submit" class="button-save">Save Changes</button>
+                    <button type="submit" class="button-save edit-product">Save Changes</button>
                 </form>
             </div>
         </div>
-
 
 
         <!-- Remove Product Modal -->
@@ -164,6 +164,7 @@ if (isset($_GET['search'])) {
         </div>
 
         <script src="../js/admin.js"></script>
+        <script src="../js/hamburgerMenu.js"></script>
     </main>
 
     <?php include '../common/insidefooter.html'; ?>
